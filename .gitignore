@@ -1,6 +1,7 @@
 *.tmp
 *.swp
 *.DS_Store
+*.gem
 
 Gemfile.lock
 
