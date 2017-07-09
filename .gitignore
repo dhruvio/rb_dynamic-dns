@@ -2,4 +2,8 @@
 *.swp
 *.DS_Store
 
+Gemfile.lock
+
+.bundle/
+
 vendor/

@@ -1,6 +1,6 @@
 require 'net/http'
 require 'aws-sdk'
-require_relative 'dns-updater'
+require 'dynamic_dns/dns_updater'
 
 module DynamicDns
 
