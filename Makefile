@@ -1,5 +1,5 @@
 run:
-	bundle exec ruby bin/dynamic-dns
+	bundle exec ruby -I lib bin/dynamic-dns
 
 install:
 	bundle install --path vendor/bundle

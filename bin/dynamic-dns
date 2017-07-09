@@ -1,6 +1,6 @@
 #! /usr/bin/env ruby
 
-require 'dynamic-dns'
+require 'dynamic_dns'
 
 DOMAIN    = ENV['DYNAMIC_DNS_DOMAIN']
 SUBDOMAIN = ENV['DYNAMIC_DNS_SUBDOMAIN']
