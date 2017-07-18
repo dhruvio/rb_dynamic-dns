@@ -9,7 +9,7 @@ This gem is useful as a command-line executable, and as a library.
 
 The following usage examples will configure the daemon to run every 10 minutes, updating the hosted zone for `foo.com` in Route53 to have an `A` record that points `ssh.foo.com` to the computer's public IPv4 address. See the *Configuration* section below for more information on the environment variables used to configure the daemon.
 
-Ensure you have installed this gem to use the command-line tool. You must have Ruby 2.4.0, or greater, installed.
+Ensure you have installed this gem to use the command-line tool. You must have Ruby 2.4, or greater, installed.
 
 ```bash
 $ gem install dynamic_dns
@@ -25,7 +25,7 @@ $ DYNAMIC_DNS_DOMAIN=foo.com DYNAMIC_DNS_SUBDOMAIN=ssh DYNAMIC_DNS_INTERVAL=600 
 ```
 
 
-### `systemd` Start-Up Script
+### `systemd` Start-up Script
 
 If you are using `rvm` with `systemd`, ensure that `rvm` was installed using `sudo`, then install this gem.
 
@@ -69,7 +69,7 @@ It is possible to configure this daemon using environment variables.
 | `DYNAMIC_DNS_DOMAIN` | Y | N/A | `foo.com` | This domain's hosted zone will be updated. It must already have an existing hosted zone in Route53 prior to running the daemon. |
 | `DYNAMIC_DNS_SUBDOMAIN` | Y | N/A | `ssh` | The name of the A record that will point to the public IP address discovered by the daemon. |
 | `DYNAMIC_DNS_INTERVAL` | N | `60` | `60` | The interval in seconds that the daemon should query for the public IPv4 address. |
-| `AWS_ACCESS_KEY_ID` | Y | N/A | `abc123` | Your AWS access key ID. It must have permissions to manage Route53. This requirement is defined by the `aws-sdk` gem ([link](https://github.com/aws/aws-sdk-ruby)). An alternative method to providnig your AWS credentials to create an `~/.aws/credentials` file. |
+| `AWS_ACCESS_KEY_ID` | Y | N/A | `abc123` | Your AWS access key ID. It must have permissions to manage Route53. This requirement is defined by the `aws-sdk` gem ([link](https://github.com/aws/aws-sdk-ruby)). An alternative method to providnig your AWS credentials is to create an `~/.aws/credentials` file. |
 | `AWS_SECRET_ACCESS_KEY` | Y | N/A | `abc123` | Your AWS secret access key. See above for notes on AWS credentials. |
 
 
