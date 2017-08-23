@@ -28,7 +28,9 @@ module DynamicDns
     # returns a string represents the ip address
     def fetch_ip
       log 'fetching ip'
-      Net::HTTP.get(@@GET_IP_URI)
+      request = Net::HTTP::Get.new @@GET_IP_URI
+      response = Net::HTTP.start(@@GET_IP_URI.host, @@GET_IP_URI.port, :use_ssl => true) { |http| http.request request }
+      response.body.strip!
     end
 
     def start
