@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name                   = 'dynamic_dns'
-  gem.version                = '0.1.0'
+  gem.version                = '0.1.1'
   gem.date                   = '2017-07-17'
   gem.summary                = 'Dynamic DNS'
   gem.description            = 'Daemon to update an Amazon Route53 A record with a computer\'s dynamic IPv4 address.'
